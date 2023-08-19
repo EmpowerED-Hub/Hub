@@ -3,21 +3,14 @@ from django.db import models
 
 
 class UserProfile(models.Model):
-    SIXTH_GRADE = 6
-    SEVENTH_GRADE = 7
-    EIGHTH_GRADE = 8
-    NINTH_GRADE = 9
-    TENTH_GRADE = 10
-    ELEVENTH_GRADE = 11
-    TWELFTH_GRADE = 12
     GRADE_LEVEL_CHOICES = [
-        (SIXTH_GRADE, "6th"),
-        (SEVENTH_GRADE, "7th"),
-        (EIGHTH_GRADE, "8th"),
-        (NINTH_GRADE, "9th (Freshman)"),
-        (TENTH_GRADE, "10th (Sophomore)"),
-        (ELEVENTH_GRADE, "11th (Junior)"),
-        (SIXTH_GRADE, "12th (Senior)"),
+        ("6", "6th"),
+        ("7", "7th"),
+        ("8", "8th"),
+        ("9", "9th (Freshman)"),
+        ("10", "10th (Sophomore)"),
+        ("11", "11th (Junior)"),
+        ("12", "12th (Senior)"),
     ]
     CAREER_INTERESTS_CHOICES = [
         ("Healthcare", "Healthcare and Medicine"),
@@ -46,7 +39,7 @@ class UserProfile(models.Model):
         max_length=200, choices=CAREER_INTERESTS_CHOICES, default="Undecided"
     )
     grade_level = models.CharField(
-        max_length=2, choices=GRADE_LEVEL_CHOICES, default=SIXTH_GRADE
+        max_length=200, choices=GRADE_LEVEL_CHOICES, null=True
     )
 
     def __str__(self):

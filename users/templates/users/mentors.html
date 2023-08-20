@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mentors for Your Career Path</title>
+    <style>
+      body,
+      h1,
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+        font-family: monospace;
+        color: #f9fafb;
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1000;
+        transition: background-color 1s ease;
+      }
+
+      .background {
+        background-color: white;
+        text-align: center;
+        width: 100%;
+        padding: 100px 0;
+      }
+
+      .title {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #343573;
+      }
+
+      .mentor-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        gap: 40px;
+      }
+
+      .mentor {
+        position: relative;
+        cursor: pointer;
+      }
+
+      .mentor img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+      }
+
+      .mentor:hover img {
+        transform: scale(1.1);
+      }
+
+      .mentor-details {
+        position: absolute;
+        top: -140px;
+        left: -100px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        display: none;
+        width: 200px;
+        transition: opacity 0.3s ease;
+      }
+
+      .mentor:hover .mentor-details {
+        display: block;
+      }
+
+      .mentor-name {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+
+      .mentor-info {
+        font-size: 14px;
+      }
+    </style>
+    <script>
+      window.addEventListener("scroll", function () {
+        var navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="{% url 'register' %}" class="btn btn-primary">Get Started</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="background">
+      <div class="container">
+        <h1 class="title">Mentors for Your Career Path</h1>
+        <div class="mentor-container">
+          <div class="mentor">
+            <img src="mentor1.jpg" alt="Mentor 1" />
+            <div class="mentor-details">
+              <div class="mentor-name">John Doe</div>
+              <div class="mentor-info">Career Expertise: Programming</div>
+              <div class="mentor-info">Age: 35</div>
+            </div>
+          </div>
+          <div class="mentor">
+            <img src="mentor2.jpg" alt="Mentor 2" />
+            <div class="mentor-details">
+              <div class="mentor-name">Jane Smith</div>
+              <div class="mentor-info">Career Expertise: Design</div>
+              <div class="mentor-info">Age: 28</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
-    <!-- <link rel="stylesheet" href="{% static 'C:/Users\marri/Documents/ComputerScience/Project Empower Hackathon/Hub/users/static/users/' %}">  -->
-</head>
-<body>
-    <div id="react-register-root"></div>
-    <!-- <script src="{% static 'C:/Users/marri/Documents/ComputerScience/Project Empower Hackathon/Hub/static/css/register.css' %}"></script> -->
-</body>
+<html>
+  <head>
+    <title>User Registration</title>
+  </head>
+  <body>
+    <h1>User Registration</h1>
+    <form method="post">
+      {% csrf_token %} {{ user_form.as_p }} {{ profile_form.as_p }}
+      <button type="submit">Register</button>
+    </form>
+  </body>
 </html>

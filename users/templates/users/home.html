@@ -1,25 +1,108 @@
-<link rel="stylesheet" href="home.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowerED Hub</title>
+    <style>
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+            font-family: monospace;
+        }
 
-<div class="hero">
-  <div class="container">
-    <h1 class="hero-title">Welcome to EmpowerED Hub</h1>
-    <p class="hero-description">Empowering Students for a Bright Future</p>
-    <a href="{% url 'register' %}" class="btn btn-primary">Get Started</a>
-  </div>
+        .background {
+            background-image: url('https://colorlib.com/etc/lf/Login_v5/images/bg-01.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            width: 100%;
+            padding: 200px 0px 600px;
+        }
+
+        .title {
+            padding-top: 150px;
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .description {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .features {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-title {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="background">
+    <div class="container">
+        <h1 class="title">Welcome to EmpowerED Hub</h1>
+        <p class="description">Empowering Students for a Bright Future</p>
+        <a href="{% url 'register' %}" class="btn btn-primary">Get Started</a>
+    </div>
 </div>
+
 <div class="features">
-  <div class="container">
-    <div class="feature">
-      <h2 class="feature-title">Personalized Learning</h2>
-      <p class="feature-description">Tailored educational experiences for every student.</p>
+    <div class="container">
+        <div class="feature">
+            <h2 class="feature-title">Personalized Learning</h2>
+            <p class="feature-description">Tailored educational experiences for every student.</p>
+        </div>
+        <div class="feature">
+            <h2 class="feature-title">Explore Careers</h2>
+            <p class="feature-description">Discover a world of opportunities with career exploration.</p>
+        </div>
+        <div class="feature">
+            <h2 class="feature-title">Connect and Collaborate</h2>
+            <p class="feature-description">Connect with peers and educators for meaningful collaboration.</p>
+        </div>
     </div>
-    <div class="feature">
-      <h2 class="feature-title">Explore Careers</h2>
-      <p class="feature-description">Discover a world of opportunities with career exploration.</p>
-    </div>
-    <div class="feature">
-      <h2 class="feature-title">Connect and Collaborate</h2>
-      <p class="feature-description">Connect with peers and educators for meaningful collaboration.</p>
-    </div>
-  </div>
 </div>
+
+</body>
+</html>

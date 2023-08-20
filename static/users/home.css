@@ -1,0 +1,51 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Styles for the hero section */
+  .hero {
+    background-image: url('//www.html.am/images/samples/remarkables_queenstown_new_zealand-300x225.jpg');
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    padding: 200px 0;
+  }
+  
+  .hero-title {
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  /* Styles for features section */
+  .features {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .feature {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .feature-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-description {
+    font-size: 16px;
+  }
+  
